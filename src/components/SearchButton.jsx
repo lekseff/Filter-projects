@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 function SearchButton(props) {
   const {name, selected} = props;
   const isSelected = (name === selected) ? 'selected' : ''
@@ -12,3 +14,8 @@ function SearchButton(props) {
 }
 
 export default SearchButton
+
+SearchButton.propTypes = {
+  name: PropTypes.string.isRequired,
+  selected: PropTypes.string.isRequired,
+}

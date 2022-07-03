@@ -1,4 +1,5 @@
 import {v4} from 'uuid'
+import PropTypes from 'prop-types';
 import SearchButton from './SearchButton'
 
 function Toolbar(props) {
@@ -27,3 +28,8 @@ function Toolbar(props) {
 }
 
 export default Toolbar
+
+Toolbar.propTypes = {
+  filters: PropTypes.array.isRequired,
+  selected: PropTypes.string.isRequired
+}

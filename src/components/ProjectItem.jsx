@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 function ProjectItem(props) {
   const {img} = props
   return (
@@ -8,3 +10,7 @@ function ProjectItem(props) {
 }
 
 export default ProjectItem
+
+ProjectItem.propTypes = {
+  img: PropTypes.string.isRequired
+}

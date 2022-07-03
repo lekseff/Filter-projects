@@ -9,6 +9,7 @@ body {
   font-weight: 400 ;
   color: grey;
   min-height: 100vh;
+  overflow-y: scroll;
   background: linear-gradient(360deg, #d595ee,#ffbcb7,#f0eee9);
 }
 
@@ -46,10 +47,6 @@ body {
   transform: translateY(2px);
   transition: all 100ms ease-out;
 }
-
-/* .toolbar__button:active {
-  transform: scale(0.98);
-} */
 
 .toolbar__button:nth-child(n+2) {
   margin-left: 8px;

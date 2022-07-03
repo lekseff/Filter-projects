@@ -1,10 +1,11 @@
+import PropTypes from 'prop-types';
 import Toolbar from './Toolbar'
 import ProjectList from './ProjectList'
 import projectsAll from '../js/projects'
 import { useState } from 'react'
 
-function Portfolio() {
-  const filters = ["All", "Websites", "Flayers", "Business Cards"]
+function Portfolio(props) {
+  const {filters} = props
   const [selected, setSelected] = useState('All');
   
   const onSelectFilter = (name) => {
@@ -31,3 +32,7 @@ function Portfolio() {
 }
 
 export default Portfolio
+
+Portfolio.propTypes = {
+  filters: PropTypes.array.isRequired
+}
