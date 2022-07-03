@@ -1,38 +1,92 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400 ;
+  color: grey;
   min-height: 100vh;
+  background: linear-gradient(360deg, #d595ee,#ffbcb7,#f0eee9);
+}
+
+.portfolio {
+  max-width: 900px;
+  width: 100%;
+  padding: 20px 15px;
+  margin: 0 auto;
+}
+
+
+/* Toolbar */
+.toolbar {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-wrap: wrap;
+  padding: 11px 0;
+  border-bottom: 1px solid #aaa4a4d1;
+}
+
+.toolbar__button {
+  font-family: inherit;
+  color: inherit;
+  letter-spacing: 0.1em;
+  padding: 6px 15px;
+  background-color: transparent;
+  border: 1px solid grey;
+  cursor: pointer;
+  border-radius: 6px;
+  user-select: none;
+}
+
+.toolbar__button:hover {
+  transform: translateY(2px);
+  transition: all 100ms ease-out;
+}
+
+/* .toolbar__button:active {
+  transform: scale(0.98);
+} */
+
+.toolbar__button:nth-child(n+2) {
+  margin-left: 8px;
+}
+
+.selected {
   color: white;
+  background-color: gray;
 }
 
-.App-link {
-  color: #61dafb;
+/* end Toolbar */
+
+
+/* ProjectList */
+.projectList {
+  column-count: 3;
+  padding-top: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+img {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+}
+
+.portfolio__card {
+  min-height: 50px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 14px;
+  cursor: pointer;
+  background-color: rgb(185, 184, 184);
+  box-shadow: -7px -4px 7px 0px rgb(34 60 80 / 20%);
+  transition: transform 250ms ease-in-out;
+}
+
+.portfolio__card:hover {
+  transform: scale(1.03);
+  transition: transform 250ms ease-in-out;
 }
